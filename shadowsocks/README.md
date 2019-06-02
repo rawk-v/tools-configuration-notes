@@ -12,4 +12,4 @@
 
 Kcptun和Shadowsocks之间的连接关系
 
-![ss-kcptun](/Users/rawk/Downloads/kcp-ss-configuration/ss-kcptun.svg)
+![ss-kcptun](./ss-kcptun.svg)
