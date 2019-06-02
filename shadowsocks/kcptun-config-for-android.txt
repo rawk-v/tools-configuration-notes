@@ -1,0 +1,1 @@
+remoteaddr=50.117.5.218:7377;mode=fast2;dscp=0;crypt=aes;parityshard=3;rcvwnd=512;quiet=False;key=password_for_kcptun;sndwnd=512;mtu=1350;nocomp=False;datashard=10

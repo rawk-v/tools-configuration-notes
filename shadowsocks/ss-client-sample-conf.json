@@ -1,0 +1,8 @@
+{
+    "enable" : true,
+    "password" : "password_for_ss",
+    "method" : "aes-256-cfb",
+    "remarks" : "hello",
+    "server" : "127.0.0.1",
+    "server_port" : 9399,
+}
