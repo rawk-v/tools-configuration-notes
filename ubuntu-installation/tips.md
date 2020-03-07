@@ -65,3 +65,8 @@ sudo update-pciids
 sudo lshw -C display
 ```
 
+## Uninstall
+```shell
+To uninstall the CUDA Toolkit, run cuda-uninstaller in /usr/local/cuda-10.1/bin
+To uninstall the NVIDIA Driver, run nvidia-uninstall
+```
