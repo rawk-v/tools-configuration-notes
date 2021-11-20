@@ -31,6 +31,8 @@ inoremap <C-l> <ESC>
 vnoremap <C-l> <ESC>
 cnoremap <C-l> <ESC>
 
+# Search text and copy to paste board, usage:
+# search text, then run :CopyMatches
 function! CopyMatches(reg)
     let hits = []
     %s//\=len(add(hits, submatch(0))) ? submatch(0) : ''/gne
