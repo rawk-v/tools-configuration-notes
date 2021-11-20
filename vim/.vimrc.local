@@ -1,0 +1,40 @@
+nnoremap ; :
+vnoremap ; :
+nnoremap tn :tabnew<cr>
+nnoremap tc :tabc<cr>
+set cursorline
+set cursorcolumn
+highlight Normal ctermfg=245 cterm=bold term=bold
+highlight Comment cterm=bold ctermfg=248
+highlight CursorLine ctermbg=232
+highlight CursorColumn ctermbg=232
+highlight LineNr ctermbg=233 ctermfg=245 cterm=bold
+"set dictionary=/home/rawk/.vim/dict/american-english
+set nospell
+set relativenumber
+set hls
+set ignorecase
+"nnoremap <buffer> <F5> :exec '!python' shellescape(@%, 1)<CR>
+"set tags+=~/.vim/tags/opencv/tags
+"inoremap jk <ESC>
+"vnoremap jk <ESC>
+highlight SignColumn ctermbg=darkgrey
+
+Bundle 'Konfekt/FastFold'
+Bundle 'Konfekt/FoldText'
+
+" Enable c++11 syntax support
+let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
+
+" Remap Ctrl+l to <ESC> in insert mode
+inoremap <C-l> <ESC>
+vnoremap <C-l> <ESC>
+cnoremap <C-l> <ESC>
+
+function! CopyMatches(reg)
+    let hits = []
+    %s//\=len(add(hits, submatch(0))) ? submatch(0) : ''/gne
+    let reg = empty(a:reg) ? '+' : a:reg
+    execute 'let @'.reg.' = join(hits, "\n") . "\n"'
+endfunction
+command! -register CopyMatches call CopyMatches(<q-reg>)
